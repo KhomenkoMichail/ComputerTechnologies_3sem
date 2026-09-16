@@ -20,6 +20,8 @@ void closeFd(int* fd) {
 }
 
 ssize_t readFull(int fd, char* buf, size_t size) {
+    assert(buf);
+
     size_t total = 0;
 
     while (total < size) {
@@ -43,6 +45,8 @@ ssize_t readFull(int fd, char* buf, size_t size) {
 }
 
 int writeFull(int fd, const char* buf, size_t size) {
+    assert(buf);
+
     size_t total = 0;
 
     while (total < size) {
